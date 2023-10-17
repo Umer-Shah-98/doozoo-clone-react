@@ -26,7 +26,11 @@ const Footer = ({ focusOnScroll }) => {
     setIsButtonDisabled(!value || !emailPattern.test(value));
   };
   const handleJoinList = () => {
-    toast.success(`Thanks for joining, you will be notified shortly.`,{theme:'colored'});
+    toast.success(`Thanks for joining, you will be notified shortly.`, {
+      theme: "colored",
+    });
+    setInputEmailValue("");
+    setIsButtonDisabled(true)
   };
   const styles = {
     joinButton: {
